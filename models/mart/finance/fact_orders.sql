@@ -4,7 +4,7 @@ From {{ref('stg_orders')}}
 )
 , payments as(
     Select*
-    From {{ref('stag_payments')}}
+    From {{ref('stg_payments')}}
 
 )
 , final as(
