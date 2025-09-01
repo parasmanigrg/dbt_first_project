@@ -1,0 +1,15 @@
+models:
+  - name: stg_payments
+    description: Has the payment records for orders
+    columns:
+      - name: payment_id
+        description: Primary key of the table
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: Foreign key to stg_orders.order_id.
+        tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
